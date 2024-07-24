@@ -5,26 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GymX</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
-    <link rel="stylesheet" href="Home.css" />
+    <link rel="stylesheet" href="./CSS/Home.css" />
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   </head>
   <body>
     <nav class="nav_main">
-      <a href="#"><img src="./img/logo-nav.png" alt="" />GymX</a>
+      <a href="Home.html"><img src="./img/logo-nav.png" alt="" />GymX</a>
 
       <div class="nav_menu">
         <ul class="nav_list">
           <li class="nav_item"><a href="#">Home</a></li>
           <li class="nav_item"><a href="#aboutUS">About Us</a></li>
           <li class="nav_item"><a href="#Store">Store</a></li>
-          <li class="nav_item"><a href="#ContactUs">Contact Us</a></li>
+          <li class="nav_item"><a href="#contactUs">Contact Us</a></li>
         </ul>
-        <button type="button" class="nav_button">Log in</button>
+        <button type="button" class="nav_button">
+          <a href="./Login.html" target="_blank">Login</a>
+        </button>
       </div>
     </nav>
+    <section class="section" id="welcome">
+      <div class="section_content" id="content_1">
+        <h2>MAKE YOUR</h2>
+        <h1>BODY <span>SHAPE</span></h1>
+        <p class="para_content">
+          Discover a customized Approach to Achieve your fitness goals
+        </p>
+      </div>
+      <div class="section_content" id="content_2">
+        <img src="./img/home-img.png" alt="HomeImage" width="600" />
+      </div>
+    </section>
+    <section class="section" id="aboutUS">
+      <div class="about-container">
+        <h1>About Us</h1>
+        <p>
+          Welcome to <strong>gymX</strong>, your ultimate destination for
+          high-quality gym gear and supplements. At gymX, we are dedicated to
+          empowering fitness enthusiasts with the best products to help them
+          achieve their fitness goals.
+        </p>
+        <p>
+          Our journey began with a passion for fitness and a commitment to
+          provide top-notch gym clothes, supplements, and basic equipment.
+          Whether you're a seasoned athlete or just starting your fitness
+          journey, gymX is here to support you every step of the way.
+        </p>
+        <p>
+          We believe in the power of fitness to transform lives, and our mission
+          is to make fitness accessible and enjoyable for everyone. Our
+          carefully curated products are designed to meet the diverse needs of
+          our customers, ensuring quality, comfort, and performance.
+        </p>
+        <p>
+          Thank you for choosing gymX. Together, let's strive for a healthier,
+          stronger, and more active lifestyle.
+        </p>
+      </div>
+    </section>
 
-    <section class="section_home" id="aboutUS">About us</section>
-    <section class="section_home" id="Store">Store</section>
-    <section class="section_home" id="ContactUs">Contact us</section>
+    <section class="section" id="Store">Store</section>
+    <section class="section" id="contactUs">
+      <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
 
     <footer class="footer">Footer</footer>
   </body>
