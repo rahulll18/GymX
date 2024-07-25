@@ -6,7 +6,10 @@
     <title>GymX</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
     <link rel="stylesheet" href="./CSS/Home.css" />
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal().reveal('.section', { delay: 200 });
+    </script>
   </head>
   <body>
     <nav class="nav_main">
@@ -64,7 +67,27 @@
       </div>
     </section>
 
-    <section class="section" id="Store">Store</section>
+    <section class="section" id="Store">
+      <h1>Our Store</h1>
+      <div class="store-container">
+        <div class="store-item">
+          <img src="https://media.istockphoto.com/id/486662770/photo/friends-in-fitness.jpg?s=612x612&w=0&k=20&c=diU0UHIy0QCzH3-NoSX_fcZfinhTJCg-BMrV5OhjJmU=" alt="Clothes">
+          <h2>Clothes</h2>
+          <button>Purchase now</button>
+        </div>
+        <div class="store-item">
+          <img src="https://c8.alamy.com/comp/2D4AEN4/whey-protein-powders-and-dumbells-isolated-on-white-background-3d-illustration-2D4AEN4.jpg" alt="Supplements">
+          <h2>Supplements</h2>
+          <button>Purchase now</button>
+        </div>
+        <div class="store-item">
+          <img src="./img/welcome-equi.jpg" alt="Equipments">
+          <h2>Equipments</h2>
+          <button>Purchase now</button>
+        </div>
+      </div>
+    </section>
+    
     <section class="section" id="contactUs">
       <div class="contact-container">
         <h1>Contact Us</h1>
@@ -84,5 +107,6 @@
     </section>
 
     <footer class="footer">Footer</footer>
+    
   </body>
 </html>

@@ -1,0 +1,85 @@
+body {
+    background-color: hsl(180, 12%, 8%);
+    color: hsl(180, 4%, 72%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .registration-container {
+    max-width: 450px;
+    width: 100%;
+    background-color: hsl(180, 12%, 15%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;background-color : 0.3s ease-in-out;
+  }
+  
+  .registration-container:hover {
+    background-color: hsl(180, 12%, 20%);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: hsl(180, 4%, 95%);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  h1:hover {
+    color: hsl(180, 4%, 85%);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: hsl(180, 4%, 72%);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  label:hover {
+    color: hsl(180, 4%, 80%);
+  }
+  
+  input, select {
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid hsl(180, 12%, 25%);
+    border-radius: 5px;
+    background-color: hsl(180, 12%, 10%);
+    color: hsl(180, 4%, 72%);
+    transition: border-color 0.3s ease-in-out;background-color: 0.3s ease-in-out;
+  }
+  
+  input:focus, select:focus {
+    border-color: hsl(180, 12%, 35%);
+    background-color: hsl(180, 12%, 12%);
+    outline: none;
+  }
+  
+  button {
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(180, 12%, 25%);
+    color: hsl(180, 4%, 95%);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: hsl(180, 12%, 30%);
+    transform: scale(1.05);
+  }
+  
