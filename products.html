@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - gymX</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+    <link rel="stylesheet" href="./CSS/Products.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <div id="productsContainer"></div>
+    <script src="./script/nav.js"></script>
+    <script>
+      const productsContainer = document.getElementById("productsContainer");
+
+      const productsList = [
+        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+      ];
+
+      productsList.forEach((product) => {
+        const productElement = document.createElement("div");
+        productElement.setAttribute("class", "productDiv");
+
+        const productHeading = document.createElement("h2");
+        productHeading.innerHTML = product.clothes;
+        productElement.append(productHeading);
+
+        const pDescription = document.createElement("p");
+        pDescription.innerHTML = product.desciption;
+        productElement.append(pDescription);
+
+        const ratingbtn = document.createElement("button");
+        ratingbtn.setAttribute("class", "rating-btn");
+        ratingbtn.innerHTML = product.rating;
+        productElement.append(ratingbtn);
+
+        productsContainer.append(productElement);
+      });
+    </script>
+  </body>
+</html>

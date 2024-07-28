@@ -77,20 +77,26 @@
             alt="Clothes"
           />
           <h2>Clothes</h2>
-          <button>Purchase now <i class="ri-arrow-right-line"></i></button>
+          <button class="home-btn">
+            <a href="./products.html" target="_blank">Purchase now </a
+            ><i class="ri-arrow-right-line"></i>
+          </button>
         </div>
         <div class="store-item">
-          <img
-            src="https://c8.alamy.com/comp/2D4AEN4/whey-protein-powders-and-dumbells-isolated-on-white-background-3d-illustration-2D4AEN4.jpg"
-            alt="Supplements"
-          />
+          <img src="./img/supplement.jpg" alt="Supplements" />
           <h2>Supplements</h2>
-          <button>Purchase now <i class="ri-arrow-right-line"></i></button>
+          <button class="home-btn">
+            <a href="./products.html" target="_blank">Purchase now </a>
+            <i class="ri-arrow-right-line"></i>
+          </button>
         </div>
         <div class="store-item">
           <img src="./img/welcome-equi.jpg" alt="Equipments" />
           <h2>Equipments</h2>
-          <button>Purchase now <i class="ri-arrow-right-line"></i></button>
+          <button class="home-btn">
+            <a href="./products.html" target="_blank">Purchase now </a>
+            <i class="ri-arrow-right-line"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -142,61 +148,6 @@
         <p>&copy; 2024 GymX | All Rights Reserved</p>
       </div>
     </footer>
-    <script>
-      ScrollReveal().reveal(".section", { delay: 700 });
-      // Create navbar elements
-      const nav = document.createElement("nav");
-      nav.classList.add("nav_main");
-
-      const navLink = document.createElement("a");
-      navLink.href = "Home.html";
-      const navLogo = document.createElement("img");
-      navLogo.src = "./img/logo-nav.png";
-      navLogo.alt = "";
-      navLink.appendChild(navLogo);
-      navLink.appendChild(document.createTextNode("GymX"));
-
-      const navMenu = document.createElement("div");
-      navMenu.classList.add("nav_menu");
-
-      const navList = document.createElement("ul");
-      navList.classList.add("nav_list");
-
-      const navItems = [
-        { href: "#", text: "Home" },
-        { href: "#aboutUS", text: "About Us" },
-        { href: "#Store", text: "Store" },
-        { href: "#contactUs", text: "Contact Us" },
-      ];
-
-      navItems.forEach((item) => {
-        const li = document.createElement("li");
-        li.classList.add("nav_item");
-        const a = document.createElement("a");
-        a.href = item.href;
-        a.textContent = item.text;
-        li.appendChild(a);
-        navList.appendChild(li);
-      });
-
-      const navButton = document.createElement("button");
-      navButton.type = "button";
-      navButton.classList.add("nav_button");
-      const navButtonLink = document.createElement("a");
-      navButtonLink.href = "./Login.html";
-      navButtonLink.target = "_blank";
-      navButtonLink.textContent = "Login";
-      navButton.appendChild(navButtonLink);
-
-      // Assemble navbar
-      navMenu.appendChild(navList);
-      navMenu.appendChild(navButton);
-
-      nav.appendChild(navLink);
-      nav.appendChild(navMenu);
-
-      // Append to body
-      document.body.prepend(nav);
-    </script>
+    <script src="./script/nav.js"></script>
   </body>
 </html>

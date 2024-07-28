@@ -7,11 +7,24 @@
     <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
     <link rel="stylesheet" href="./CSS/Login.css" />
   </head>
+  <style>
+    .errorNode1 {
+      margin-top: 5px;
+      color: white;
+      margin-bottom: 25px;
+    }
+    .errorNode2 {
+      margin-top: 5px;
+      color: white;
+      margin-bottom: 25px;
+    }
+  </style>
   <body>
     <div class="login-container">
       <h2>Login</h2>
-      <form id="loginForm">
+      <form id="loginForm" onsubmit="">
         <input type="email" id="email" name="email" placeholder="Email" />
+        <p class="errorNode1">Email id is required</p>
 
         <input
           type="password"
@@ -19,10 +32,13 @@
           name="password"
           placeholder="Password"
         />
+        <p class="errorNode2">Password is required</p>
 
         <button type="submit">Log In</button>
       </form>
       <p>Don't have an account? <a href="Register.html">Register here</a></p>
     </div>
+
+    <script></script>
   </body>
 </html>

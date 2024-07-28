@@ -172,7 +172,10 @@ body{
   .store-item h2:hover {
     color: hsl(180, 4%, 85%);
   }
-  
+  .home-btn a{
+    text-decoration: none;
+    color: hsl(180, 4%, 95%);
+  }
   button {
     font-size: 1em;
     padding: 15px;
@@ -181,7 +184,7 @@ body{
     background-color: hsl(180, 12%, 25%);
     color: hsl(180, 4%, 95%);
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; transform :0.3s ease-in-out;
   }
   
   button:hover {

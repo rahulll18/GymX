@@ -1,0 +1,102 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: hsl(180, 12%, 8%);
+    color: hsl(180, 4%, 72%);
+    font-family: Arial, sans-serif;
+}
+.nav_main {
+    height: 60px;
+    padding: 10px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_main a img {
+    width: 25px;
+    margin-left: 50px;
+}
+
+.nav_main a {
+    color: hsl(180, 4%, 72%);
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.nav_menu {
+    display: flex;
+    width: 700px;
+    justify-content: space-around;
+    margin-right: 50px;
+}
+
+.nav_menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.nav_menu ul li {
+    margin: 0 30px;
+}
+
+.nav_menu ul li a:hover {
+    color: hsl(79, 63%, 50%);
+}
+
+.nav_button {
+    padding: 10px 30px;
+    background-color: hsl(79, 63%, 50%);
+    width: 120px;
+    border-radius: 10px;
+}
+
+.nav_button a {
+    color: black;
+}
+
+.nav_button:hover {
+    background-color: hsl(79, 44%, 59%);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#productsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-width: 90%;
+    margin: 0px auto;
+}
+.productDiv {
+    width: 250px;
+    height: 400px;
+    margin: 20px;
+    transition: transform 0.3s;
+    background-color:hsl(180, 12%, 20%);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 10px;
+}
+
+.productDiv:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    border: 2px solid wheat;
+}
+.rating-btn{
+    padding: 2px;
+    background-color: green;
+    color: white;
+    width: 50px;
+}

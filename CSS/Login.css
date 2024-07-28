@@ -58,12 +58,11 @@ label:hover {
 input {
     font-size: 1em;
     padding: 15px;
-    margin-bottom: 20px;
     border: 1px solid hsl(180, 12%, 25%);
     border-radius: 5px;
     background-color: hsl(180, 12%, 10%);
     color: hsl(180, 4%, 72%);
-    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;background-color: 0.3s ease-in-out;
 }
 
 input:focus {
