@@ -14,6 +14,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* position: fixed;
+    top: 0; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; */
+        /* Ensure the navbar is on top of other elements */
 }
 
 .nav_main a img {
@@ -76,6 +81,9 @@ body {
     max-width: 90%;
     margin: 0px auto;
 }
+#productsContainer h2{
+    margin: 15px;
+}
 .productDiv {
     width: 250px;
     height: 400px;
@@ -87,16 +95,55 @@ body {
     /* justify-content: center; */
     align-items: center;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 }
 
 .productDiv:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
     cursor: pointer;
-    border: 2px solid wheat;
+    /* border: 2px solid wheat; */
 }
-.rating-btn{
-    padding: 2px;
+.productImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.productDiv p{
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.buy-btn{
+    padding: 10px 20px;
     background-color: green;
     color: white;
-    width: 50px;
+    border-radius: 15px;
+    width: 150px;
+}
+.buy-btn:hover{
+    padding: 10px 20px;
+    background-color : white;
+    color: hsl(79, 44%, 59%);
+}
+.entirePrice{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.mainPrice{
+    font-size: 19px;
+    font-weight: bold;
+    margin-left: 18px;
+    margin-right: 5px;
+}
+.strikePrice{
+    text-decoration: line-through;
+    color: #878787;
+    font-size:smaller;
+    margin-right: 25px;
+}
+.offerPrice{
+    color: hsl(79, 63%, 50%);
 }

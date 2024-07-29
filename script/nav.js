@@ -18,7 +18,7 @@ const navList = document.createElement("ul");
 navList.classList.add("nav_list");
 
 const navItems = [
-  { href: "#", text: "Home" },
+  { href: "Home.html", text: "Home" },
   { href: "#aboutUS", text: "About Us" },
   { href: "#Store", text: "Store" },
   { href: "#contactUs", text: "Contact Us" },

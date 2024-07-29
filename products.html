@@ -6,6 +6,10 @@
     <title>Products - gymX</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
     <link rel="stylesheet" href="./CSS/Products.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
@@ -15,16 +19,81 @@
       const productsContainer = document.getElementById("productsContainer");
 
       const productsList = [
-        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
-        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
-        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
-        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
-        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
-        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
-        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
-        { clothes: "shorts", rating: "5 *", desciption: "this is short" },
+        {
+          clothes: "Stringer",
+          imgUrl:
+            "https://fuaark.com/cdn/shop/files/FuaarkChecksStringerUltimateGrey_1.jpg?v=1716526924&width=580",
+          desciption: "Checks Stringer Ultimate Grey",
+          price: "Rs. 399",
+          strikePrice: "Rs. 900",
+          offerPrice: "60% off",
+        },
+        {
+          clothes: "T-Shirt",
+          imgUrl:
+            "https://fuaark.com/cdn/shop/files/FuaarkCompressionFullsleevesTeal_4.jpg?v=1712384732&width=1&width=400",
+          desciption: "Compression Fullsleeves T-shirt",
+          price: "Rs. 379",
+          strikePrice: "Rs. 749",
+          offerPrice: "49% off",
+        },
+        {
+          clothes: "OverSized Shirt",
+          imgUrl:
+            "https://fuaark.com/cdn/shop/files/FuaarkBlurredDuskPink_5.jpg?v=1720084609&width=1&width=400",
+          desciption: "Blurred Oversized T-shirts",
+          price: "Rs. 499",
+          strikePrice: "Rs. 1499",
+          offerPrice: "66% off",
+        },
+        {
+          clothes: "Compression fit",
+          imgUrl:
+            "https://fuaark.com/cdn/shop/files/FuaarkCompression2.0halfSleevesT-shirtBlack_4.jpg?v=1702009356&width=1&width=400",
+          desciption: "Compression 2.0 T-shirt Black",
+          price: "Rs. 484",
+          strikePrice: "Rs. 749",
+          offerPrice: "35% off",
+        },
+        {
+          clothes: "Crop Top",
+          imgUrl:
+            "https://fuaark.com/cdn/shop/files/FuaarkLegacyT-shirtMustardCroptop_7.jpg?v=1721907268&width=1&width=400",
+          desciption: "Legacy Crop Top T-shirt Mustard",
+          price: "Rs. 699",
+          strikePrice: "Rs. 999",
+          offerPrice: "30% off",
+        },
+        {
+          clothes: "Slim Fit",
+          imgUrl:
+            "https://fuaark.com/cdn/shop/files/FuaarkLegacyTshirtBottleGreen_2.jpg?v=1721906151&width=1&width=400",
+          desciption: "Legacy T-shirt Bottle Green",
+          price: "Rs. 499",
+          strikePrice: "Rs. 749",
+          offerPrice: "33% off",
+        },
+        {
+          clothes: "Sports Bra",
+          imgUrl:
+            "https://fuaark.com/cdn/shop/files/fuaark-pro-sports-bra-rust-1.jpg?v=1715685726&width=1&width=400",
+          desciption: "Pro Sports Bra Rust",
+          price: "Rs. 699",
+          strikePrice: "Rs. 1499",
+          offerPrice: "53% off",
+        },
+        {
+          clothes: "Tank Top",
+          imgUrl:
+            "https://fuaark.com/cdn/shop/files/fuaark-bold-melange-tank-orange-2.jpg?v=1695206159&width=1&width=400",
+          desciption: "Bold Melange Tank Orange",
+          price: "Rs. 549",
+          strikePrice: "Rs. 999",
+          offerPrice: "45% off",
+        },
       ];
 
+      // getElementById
       productsList.forEach((product) => {
         const productElement = document.createElement("div");
         productElement.setAttribute("class", "productDiv");
@@ -33,14 +102,38 @@
         productHeading.innerHTML = product.clothes;
         productElement.append(productHeading);
 
+        const imageContainer = document.createElement("img");
+        imageContainer.setAttribute("class", "productImg");
+        imageContainer.src = product.imgUrl;
+        productElement.append(imageContainer);
+
         const pDescription = document.createElement("p");
         pDescription.innerHTML = product.desciption;
         productElement.append(pDescription);
 
-        const ratingbtn = document.createElement("button");
-        ratingbtn.setAttribute("class", "rating-btn");
-        ratingbtn.innerHTML = product.rating;
-        productElement.append(ratingbtn);
+        const price = document.createElement("div");
+        price.setAttribute("class", "entirePrice");
+        productElement.append(price);
+
+        const mainPrice = document.createElement("div");
+        mainPrice.setAttribute("class", "mainPrice");
+        mainPrice.innerHTML = product.price;
+        price.append(mainPrice);
+
+        const strikePrice = document.createElement("div");
+        strikePrice.setAttribute("class", "strikePrice");
+        strikePrice.innerHTML = product.strikePrice;
+        price.append(strikePrice);
+
+        const offerPrice = document.createElement("div");
+        offerPrice.setAttribute("class", "offerPrice");
+        offerPrice.innerHTML = product.offerPrice;
+        price.append(offerPrice);
+
+        const button = document.createElement("button");
+        button.setAttribute("class", "buy-btn");
+        button.innerHTML = "Buy Now";
+        productElement.append(button);
 
         productsContainer.append(productElement);
       });
