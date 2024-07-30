@@ -6,25 +6,21 @@
     <title>GymX</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
     <link rel="stylesheet" href="./CSS/Login.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .error {
+        margin-top: 5px;
+        color: white;
+        margin-bottom: 25px;
+      }
+    </style>
   </head>
-  <style>
-    .errorNode1 {
-      margin-top: 5px;
-      color: white;
-      margin-bottom: 25px;
-    }
-    .errorNode2 {
-      margin-top: 5px;
-      color: white;
-      margin-bottom: 25px;
-    }
-  </style>
   <body>
     <div class="login-container">
       <h2>Login</h2>
-      <form id="loginForm" onsubmit="">
+      <form id="loginForm">
         <input type="email" id="email" name="email" placeholder="Email" />
-        <p class="errorNode1">Email id is required</p>
+        <p class="error" id="emailError">Email id is required</p>
 
         <input
           type="password"
@@ -32,13 +28,54 @@
           name="password"
           placeholder="Password"
         />
-        <p class="errorNode2">Password is required</p>
+        <p class="error" id="passwordError">Password is required</p>
 
         <button type="submit">Log In</button>
       </form>
       <p>Don't have an account? <a href="Register.html">Register here</a></p>
     </div>
 
-    <script></script>
+    <script>
+      $(document).ready(function () {
+        // Initially hide error messages
+        $('.error').hide();
+
+        $('#loginForm').submit(function (event) {
+          event.preventDefault(); // Prevent the form from submitting
+
+          let isValid = true;
+
+          // Email validation
+          if ($('#email').val().trim() === '') {
+            $('#emailError').show();
+            isValid = false;
+          } else {
+            $('#emailError').hide();
+          }
+
+          // Password validation
+          if ($('#password').val().trim() === '') {
+            $('#passwordError').show();
+            isValid = false;
+          } else {
+            $('#passwordError').hide();
+          }
+
+          if (isValid) {
+            let formData = {
+              email: $('#email').val(),
+              password: $('#password').val()
+            };
+
+            alert('Login successful!\n\n' + 
+                  'Email: ' + formData.email + '\n' +
+                  'Password: ' + formData.password);
+
+            // Here you can submit the form or perform any other desired actions
+            // $(this).unbind('submit').submit();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
