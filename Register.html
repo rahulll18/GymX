@@ -9,9 +9,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     .error {
-      margin-top:-15px;
       color: red;
-      font-weight: bold;
+      font-weight:bold;
+      margin-top:-13px;
       font-size: 1em;
     }
   </style>
@@ -21,19 +21,19 @@
     <h1>Register</h1>
     <form id="registrationForm">
       <label for="fullName">Full Name</label>
-      <input type="text" id="fullName" name="fullName" >
+      <input type="text" id="fullName" name="fullName">
       <span class="error" id="fullNameError"></span>
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" >
+      <input type="email" id="email" name="email">
       <span class="error" id="emailError"></span>
 
       <label for="age">Age</label>
-      <input type="number" id="age" name="age" >
+      <input type="number" id="age" name="age">
       <span class="error" id="ageError"></span>
 
       <label for="gender">Gender</label>
-      <select id="gender" name="gender" >
+      <select id="gender" name="gender">
         <option value="">Select</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
@@ -42,27 +42,27 @@
       <span class="error" id="genderError"></span>
 
       <label for="address">Address</label>
-      <input type="text" id="address" name="address" >
+      <input type="text" id="address" name="address">
       <span class="error" id="addressError"></span>
 
       <label for="district">District</label>
-      <input type="text" id="district" name="district" >
+      <input type="text" id="district" name="district">
       <span class="error" id="districtError"></span>
 
       <label for="state">State</label>
-      <input type="text" id="state" name="state" >
+      <input type="text" id="state" name="state">
       <span class="error" id="stateError"></span>
 
       <label for="pincode">Pincode</label>
-      <input type="text" id="pincode" name="pincode" >
+      <input type="text" id="pincode" name="pincode">
       <span class="error" id="pincodeError"></span>
 
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" >
+      <input type="password" id="password" name="password">
       <span class="error" id="passwordError"></span>
 
       <label for="confirmPassword">Confirm Password</label>
-      <input type="password" id="confirmPassword" name="confirmPassword" >
+      <input type="password" id="confirmPassword" name="confirmPassword">
       <span class="error" id="confirmPasswordError"></span>
 
       <button type="submit">Register</button>
@@ -160,7 +160,28 @@
         }
 
         if (isValid) {
-          alert('Registration successful!');
+          let formData = {
+            fullName: $('#fullName').val(),
+            email: $('#email').val(),
+            age: $('#age').val(),
+            gender: $('#gender').val(),
+            address: $('#address').val(),
+            district: $('#district').val(),
+            state: $('#state').val(),
+            pincode: $('#pincode').val(),
+            password: $('#password').val()
+          };
+
+          alert('Registration successful!\n\n' +
+                'Full Name: ' + formData.fullName + '\n' +
+                'Email: ' + formData.email + '\n' +
+                'Age: ' + formData.age + '\n' +
+                'Gender: ' + formData.gender + '\n' +
+                'Address: ' + formData.address + '\n' +
+                'District: ' + formData.district + '\n' +
+                'State: ' + formData.state + '\n' +
+                'Pincode: ' + formData.pincode);
+
           // Here you can submit the form or perform any other desired actions
           // $(this).unbind('submit').submit();
         }
