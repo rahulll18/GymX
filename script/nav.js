@@ -22,6 +22,7 @@ const navItems = [
   { href: "#aboutUS", text: "About Us" },
   { href: "#Store", text: "Store" },
   { href: "#contactUs", text: "Contact Us" },
+  { href: "./BMI.html", text: "BMI Calculator", target: "_blank" },
 ];
 
 navItems.forEach((item) => {
