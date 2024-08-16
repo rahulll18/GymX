@@ -3,7 +3,9 @@
     padding: 0px;
     margin: 0px;
 }
-
+html{
+    scroll-behavior:smooth;
+}
 body{
     background-color: hsl(180, 12%, 8%);
     color: hsl(180, 4%, 72%);
