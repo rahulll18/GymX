@@ -63,12 +63,17 @@ input {
     background-color: hsl(180, 12%, 10%);
     color: hsl(180, 4%, 72%);
     transition: border-color 0.3s ease-in-out;background-color: 0.3s ease-in-out;
+    margin-bottom: 30px;
 }
 
 input:focus {
-    border-color: hsl(180, 12%, 35%);
+    border-color: white;
     background-color: hsl(180, 12%, 12%);
     outline: none;
+}
+.error {
+    /* margin-top: 5px; */
+    color: red;
 }
 
 button {
@@ -88,7 +93,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-p {
+.bottom-line {
     font-size: 1em;
     margin-top: 20px;
     color: hsl(180, 4%, 72%);

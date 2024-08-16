@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/bmi.css" />
+    <link rel="stylesheet" href="./CSS/Home.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-section">
+        <img src="./img/calculate-img.png" alt="BMI Calculation Image" />
+      </div>
+      <div class="right-section">
+        <h1>Calculate Your BMI</h1>
+        <p>
+          Body Mass Index (BMI) calculates your body mass index from your weight
+          and height.
+        </p>
+        <div class="input-row">
+          <input type="number" id="weight" placeholder="Weight in kg" />
+          <input type="number" id="height" placeholder="Height in cm" />
+        </div>
+        <button onclick="calculateBMI()">
+          Calculate BMI <i class="ri-arrow-right-line"></i>
+        </button>
+        <p id="result"></p>
+      </div>
+    </div>
+    <script src="./script/nav.js"></script>
+    <script>
+      function calculateBMI() {
+        let weightKg = document.getElementById("weight").value;
+        let heightCm = document.getElementById("height").value;
+
+        let heightM = heightCm / 100;
+
+        let resultBmi = (weightKg / (heightM * heightM)).toPrecision(3);
+
+        if (resultBmi >= 18.5 && resultBmi <= 24.9) {
+          document.getElementById("result").innerText =
+            "Your BMI is :- " +
+            resultBmi +
+            " This is Considered you are Normal";
+        } else if (resultBmi > 24.9) {
+          document.getElementById("result").innerText =
+            "Your BMI is :- " +
+            resultBmi +
+            " This is Considered you are Overweight";
+        } else {
+          document.getElementById("result").innerText =
+            "Your BMI is :- " +
+            resultBmi +
+            " This is Considered you are Underweight";
+        }
+      }
+    </script>
+  </body>
+</html>

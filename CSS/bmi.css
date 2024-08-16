@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+    background-color: hsl(180, 12%, 8%);
+    color: hsl(180, 4%, 72%);
+}
+.container {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    max-width: 85%;
+    margin: 80px auto;
+}
+
+.left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.left-section img {
+    height: 500px;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.right-section {
+    max-width: 40%;
+    padding: 30px;
+    background-color: hsl(180, 12%, 15%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.right-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: hsl(180, 4%, 95%);
+}
+
+.right-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: hsl(180, 4%, 85%);
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-around;
+        margin-bottom: 34px;
+}
+
+.input-row input {
+    font-size: 1em;
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid hsl(180, 12%, 25%);
+    border-radius: 5px;
+    background-color: hsl(180, 12%, 10%);
+    color: hsl(180, 4%, 72%);
+    width: 45%;
+}
+.input-row input :focus{
+    border-color: hsl(79, 63%, 50%);;
+}
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(79, 63%, 50%);
+    color: hsl(180, 4%, 95%);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: hsl(180, 12%, 30%);
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: hsl(79, 63%, 50%);
+}
